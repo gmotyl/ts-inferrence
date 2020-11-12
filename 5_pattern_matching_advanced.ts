@@ -35,7 +35,7 @@
         console.log(animal.eyesColor);
         break;
       case "Python":
-        console.log(animal.size);
+        console.log(animal.size); // expected error : Property 'size' does not exist on type 'Python'.ts(2339)
         break;
       case "Whale":
         console.log(animal.volume);
