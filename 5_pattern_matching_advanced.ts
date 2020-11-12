@@ -21,7 +21,7 @@
     volume: 3,
   };
   const animalWhaleErr: Animal = {
-    length: 100, // expected error: Type '{ length: number; type: "Whale"; }' is not assignable to type 'Animal'.
+    length: 100, // error: Type '{ length: number; type: "Whale"; }' is not assignable to type 'Animal'.
     // Object literal may only specify known properties, and 'length' does not exist in type 'Whale'.
     type: "Whale",
   };
