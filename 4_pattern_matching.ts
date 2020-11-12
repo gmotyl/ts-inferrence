@@ -11,13 +11,12 @@
   };
 
   // TODO: get static types from values by using the typeof keyword.
-  type Elephant =
-  type Python =
-  type Whale =
+  type Elephant = typeof elephantExample;
+  type Python = typeof pythonExample;
+  type Whale = typeof whaleExample;
   type Animal = Elephant | Python | Whale;
 
   const animalWhale: Animal = {
     volume: 3,
   };
-
 }
