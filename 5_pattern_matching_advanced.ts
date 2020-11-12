@@ -18,27 +18,27 @@
   type Animal = Elephant | Python | Whale;
 
   const animalWhale: Animal = {
-    type: "Whale",
+    type: "Whale", // no errors expected
     volume: 3,
   };
   const animalWhaleErr: Animal = {
     length: 100, // expected error: Type '{ length: number; type: "Whale"; }' is not assignable to type 'Animal'.
     // Object literal may only specify known properties, and 'length' does not exist in type 'Whale'.
-    type: "Whale",
+    type: "Whale", // no errors expected
   };
 
   const printAnimalAttrs = (animal: Animal) => {
     // define custom business logic for each data type
     switch (animal.type) {
       case "Elephant":
-        console.log(animal.trunkSize);
-        console.log(animal.eyesColor);
+        console.log(animal.trunkSize); // no errors expected
+        console.log(animal.eyesColor); // no errors expected
         break;
       case "Python":
         console.log(animal.size); // expected error : Property 'size' does not exist on type 'Python'.ts(2339)
         break;
       case "Whale":
-        console.log(animal.volume);
+        console.log(animal.volume); // no errors expected
         break;
     }
   };
