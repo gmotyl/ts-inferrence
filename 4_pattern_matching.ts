@@ -1,5 +1,4 @@
 {
-
   const elephantExample = {
     trunkSize: 10,
     eyesColor: "red",
