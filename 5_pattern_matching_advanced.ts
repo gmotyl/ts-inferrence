@@ -10,11 +10,10 @@
     volume: 30,
   };
 
-  // TODO: add a type attribute for each of our animals to make a unique standardized way
-  //       of identifying an “instance” of the animal type and check the correctness of objects.
-  type Elephant = typeof elephantExample;
-  type Python = typeof pythonExample;
-  type Whale = typeof whaleExample;
+  // Solution: Typescript & operator used for merging two Typescript’s data types
+  type Elephant = typeof elephantExample & { type: "Elephant" };
+  type Python = typeof pythonExample & { type: "Python" };
+  type Whale = typeof whaleExample & { type: "Whale" };
   type Animal = Elephant | Python | Whale;
 
   const animalWhale: Animal = {
@@ -35,7 +34,7 @@
         console.log(animal.eyesColor);
         break;
       case "Python":
-        console.log(animal.size);
+        console.log(animal.size); // error : Property 'size' does not exist on type 'Python'.ts(2339)
         break;
       case "Whale":
         console.log(animal.volume);
