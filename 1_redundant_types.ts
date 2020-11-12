@@ -1,9 +1,9 @@
 // TODO: apply Typescript “type inference”
 {
-  const main = (): number => {
-    const a: number = 3;
-    const b: number = 4;
-    const c: number = a + b;
+  const main = () => {
+    const a = 3;
+    const b = 4;
+    const c = a + b;
     return c;
   };
 }
